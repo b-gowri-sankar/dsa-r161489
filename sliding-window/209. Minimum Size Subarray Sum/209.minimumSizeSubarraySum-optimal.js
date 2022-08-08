@@ -10,6 +10,7 @@ var minSubArrayLen = function(target, nums) {
     while(right<nums.length){
         sum = sum+nums[right]
         if(sum >= target){
+            //here we can use while loop to mimimize the min instead of removing nums[right]
             min = Math.min(right - left + 1, min)
             sum = sum - nums[left] - nums[right]
             left++;
